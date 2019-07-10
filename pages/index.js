@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Flex, Box } from "rebass";
 
 const Title = styled.h1`
   font-size: 3rem;
@@ -27,9 +28,12 @@ const AboutBlock = styled.section`
   margin-top: 2em;
   margin-left: 10em;
 `;
-const Wrap = styled.section`
+
+const Wrapper = styled.section`
   display: flex;
+  height: 100%;
 `;
+
 const PortfolioLink = styled.a`
   font-size: 1rem;
   color: #212121;
@@ -54,32 +58,54 @@ const SocialLink = styled.span`
   font-family: Helvetica, sans-serif;
   text-decoration: underline;
 `;
+
+const Container = styled.div`
+  max-width: 900px;
+  margin: 0 auto;
+`;
+
+const Img = styled.img`
+  filter: grayscale(100%);
+  border-radius: 50%;
+`;
+
 export default () => (
-  <Wrap>
-    <ImgBlock>
-      <img src={`static/avatar.jpg`} width="240" height="240" />
-      <LinksNav>
-        <SocialLink href="https://twitter.com/kporcelainluv">
-          Twitter
-        </SocialLink>
-        <SocialLink href="https://www.instagram.com/solitare4/">
-          Instagram
-        </SocialLink>
-        <SocialLink href="https://t.me/ksushaz">Telegram</SocialLink>
-      </LinksNav>
-    </ImgBlock>
-    <AboutBlock>
-      <Heading>I WORK REMOTELY AS A</Heading>
-      <Title>
-        Front End Developer <br />
-        focused on React
-        <br />
-        Responsive HTML/CSS
-        <br /> Interested in Digital Design
-      </Title>
-      <PortfolioLink href="https://github.com/kporcelainluv">
-        Works
-      </PortfolioLink>
-    </AboutBlock>
-  </Wrap>
+  <Wrapper>
+    <Container>
+      <Flex justifyContent="center">
+        <Img src={`static/avatar.jpg`} width="120" height="120" />
+      </Flex>
+      <Box justifyContent="center">
+        <Box mb="32px">Xenia Zhukova</Box>
+        <Box>Frontend developer interested in digital design</Box>
+        <Box mb="32px">
+          <ul>
+            <li>Responsive HTML/CSS</li>
+            <li>React/Redux</li>
+            <li>Apollo, Graphql</li>
+            <li>Node</li>
+            <li>a little bit of Clojure/Clojurescript</li>
+          </ul>
+        </Box>
+      </Box>
+      <Box mb="32px">
+        My social accounts
+        <ul>
+          <li>github https://github.com/kporcelainluv</li>
+          <li>telegram https://t.me/ksushaz</li>
+          <li>zhukovaksusha@gmail.com</li>
+        </ul>
+      </Box>
+      <Box mb="16px">
+        My works
+        <ul>
+          <li>tic tac toe in javascript</li>
+          <li>tic tac toe in typescript</li>
+          <li>html academy, level1</li>
+          <li>html academy, level1</li>
+          <li>javascript, level2</li>
+        </ul>
+      </Box>
+    </Container>
+  </Wrapper>
 );
