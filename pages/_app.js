@@ -1,21 +1,17 @@
 import App, { Container } from "next/app";
+import Head from 'next/head'
 import React from "react";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   html {
-    min-height: 100%;
+    box-sizing: border-box;
   }
-
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
   body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    min-height: 100vh;
-  }
-
-  #__next {
-    height: 100vh;
   }
 `;
 
@@ -30,6 +26,9 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <Container>
+        <Head>
+          <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+        </Head>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
           <Component {...pageProps} />
