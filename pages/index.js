@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import avatar from "../static/avatar.jpg";
 
 const Title = styled.h1`
   font-size: 3rem;
@@ -26,21 +25,49 @@ const AboutBlock = styled.section`
   flex-direction: column;
   height: 100%;
   margin-top: 2em;
-  margin-left: 15em;
+  margin-left: 10em;
 `;
 const Wrap = styled.section`
   display: flex;
 `;
 const PortfolioLink = styled.a`
-  color: black;
   font-size: 1rem;
   color: #212121;
   font-family: Helvetica, sans-serif;
   margin-top: 1em;
   text-decoration: underline;
 `;
+const ImgBlock = styled.section`
+  display: flex;
+  margin-top: 8em;
+  margin-left: 6em;
+  flex-direction: column;
+`;
+const LinksNav = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4.4em;
+`;
+const SocialLink = styled.span`
+  font-size: 1rem;
+  color: #212121;
+  font-family: Helvetica, sans-serif;
+  text-decoration: underline;
+`;
 export default () => (
   <Wrap>
+    <ImgBlock>
+      <img src={`static/avatar.jpg`} width="240" height="240" />
+      <LinksNav>
+        <SocialLink href="https://twitter.com/kporcelainluv">
+          Twitter
+        </SocialLink>
+        <SocialLink href="https://www.instagram.com/solitare4/">
+          Instagram
+        </SocialLink>
+        <SocialLink href="https://t.me/ksushaz">Telegram</SocialLink>
+      </LinksNav>
+    </ImgBlock>
     <AboutBlock>
       <Heading>I WORK REMOTELY AS A</Heading>
       <Title>
@@ -54,7 +81,5 @@ export default () => (
         Works
       </PortfolioLink>
     </AboutBlock>
-
-    <img src={avatar} width="100" height="50" />
   </Wrap>
 );
