@@ -77,8 +77,15 @@ export default () => (
       <section>
         My certificates
         <ul>
-          <li><A href="https://github.com/kporcelainluv">HTML Academy, HTML/CSS 1</A></li>
-          <li><A href="https://github.com/kporcelainluv">HTML Academy, HTML/CSS 2</A></li>
+          <li><A href={`static/html1.pdf`}>HTML Academy, HTML/CSS 1</A></li>
+          <li><A href={`static/html2.pdf`}>HTML Academy, HTML/CSS 2</A></li>
+          <li><A href={`static/JS2.pdf`}>HTML Academy, Java Script 2</A></li>
+          <li><A href='https://www.freecodecamp.org/certification/kporcelainluv/javascript-algorithms-and-data-structures'>FreeCodeCamp, JavaScript Algorithms and Data Structures</A></li>
+
+          <li><A href={`static/Coursera1.pdf`}>Coursera, Intoduction to Python</A></li>
+          <li><A href={`static/Coursera2.pdf`}>Coursera, Diving into Python</A></li>
+          <li><A href={`static/stepik.pdf`}>Stepik.org, Programming on Python</A></li>
+          <li><A href={`static/loftschool.pdf`}>Loftschool, Web-development for begginers</A></li>
         </ul>
       </section>
     </div>
