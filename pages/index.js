@@ -9,6 +9,8 @@ const Container = styled.div`
   justify-content: center;
   padding: 32px;
   font-family: 'Raleway', Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 32px;
   
   h1 {
     margin-bottom: 8px;
@@ -16,6 +18,10 @@ const Container = styled.div`
   
   h2 {
     margin: 0 0 8px;
+  }
+  
+  h3 {
+    font-weight: bold;
   }
   
   @media (max-width: 800px) {
@@ -37,29 +43,41 @@ const A = styled.a`
   }
 `;
 
+const HiddenElement = styled.h2`
+position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+`
+
 export default () => (
   <Container>
     <div>
+      <HiddenElement className='visually-hidden'>Xenia Zhukova's website</HiddenElement>
       <Flex justifyContent={'center'}>
         <img className="avatar" src={`static/avatar.jpg`} width="120" height="120" alt={"Xenia Zhukova's photo"}/>
       </Flex>
       <Flex alignItems={'center'} flexDirection={'column'} mb={'16px'}>
         <h1>Xenia Zhukova</h1>
-        <h2>Frontend developer</h2>
+        <h2>Front-end developer</h2>
       </Flex>
       <section>
-        I have experience working with
+        <h3>Skills</h3>
         <ul>
           <li>Responsive HTML/CSS</li>
-          <li>Javascript/Typescript</li>
+          <li>SASS</li>
+          <li>Javascript</li>
           <li>React/Redux</li>
-          <li>Apollo, Graphql</li>
-          <li>Node</li>
-          <li>a little bit of Clojure/Clojurescript</li>
+          <li>Firebase</li>
+          <li>Styled components</li>
         </ul>
       </section>
       <section>
-        My social accounts
+        <h3>Social</h3>
         <ul>
           <li><A href="https://github.com/kporcelainluv">Github</A></li>
           <li><A href="https://t.me/ksushaz">Telegram</A></li>
@@ -67,25 +85,27 @@ export default () => (
         </ul>
       </section>
       <section>
-        My works
+        <h3>Projects</h3>
         <ul>
-          <li><A href="https://github.com/kporcelainluv">HTML Academy, HTML/CSS 1</A></li>
-          <li><A href="https://github.com/kporcelainluv">HTML Academy, HTML/CSS 2</A></li>
-          <li><A href="https://github.com/kporcelainluv">HTML Academy, JS 2</A></li>
+          <li><A href="https://github.com/kporcelainluv/226838-device">HTML Academy, HTML/CSS 1</A></li>
+          <li><A href="https://github.com/kporcelainluv/226838-sedona-17">HTML Academy, HTML/CSS 2</A></li>
+          <li><A href="https://github.com/kporcelainluv/226838-cinemaddict-10">HTML Academy, JS 2</A></li>
+          <li><A href="https://github.com/kporcelainluv/cinemaddict-react-app">Cinemaddict project in React.js</A></li>
+          <li><A href="https://github.com/kporcelainluv/questionaryProject">Questionary project in React.js</A></li>
         </ul>
       </section>
       <section>
-        My certificates
+        <h3>Certificates</h3>
         <ul>
           <li><A href={`static/html1.pdf`}>HTML Academy, HTML/CSS 1</A></li>
           <li><A href={`static/html2.pdf`}>HTML Academy, HTML/CSS 2</A></li>
           <li><A href={`static/JS2.pdf`}>HTML Academy, Java Script 2</A></li>
           <li><A href='https://www.freecodecamp.org/certification/kporcelainluv/javascript-algorithms-and-data-structures'>FreeCodeCamp, JavaScript Algorithms and Data Structures</A></li>
-
-          <li><A href={`static/Coursera1.pdf`}>Coursera, Intoduction to Python</A></li>
+          <li><A href={`#`}>Udemy, Modern React with Redux</A></li>
+          <li><A href={`static/Coursera1.pdf`}>Coursera, Introduction to Python</A></li>
           <li><A href={`static/Coursera2.pdf`}>Coursera, Diving into Python</A></li>
           <li><A href={`static/stepik.pdf`}>Stepik.org, Programming on Python</A></li>
-          <li><A href={`static/loftschool.pdf`}>Loftschool, Web-development for begginers</A></li>
+          <li><A href={`static/loftschool.pdf`}>Loftschool, Web-development for beginners</A></li>
         </ul>
       </section>
     </div>

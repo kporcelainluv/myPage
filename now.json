@@ -1,3 +1,8 @@
 {
-  "name": "zhukovaxenia"
+  "version": 2,
+  "alias": "my-aliased-nextjs-project",
+  "name": "",
+  "builds": [
+    { "src": "next.config.js", "use": "@now/next" }
+  ]
 }
