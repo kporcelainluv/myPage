@@ -101,6 +101,7 @@ export default () => (
           <li><A href={`static/html2.pdf`}>HTML Academy, HTML/CSS 2</A></li>
           <li><A href={`static/JS2.pdf`}>HTML Academy, Java Script 2</A></li>
           <li><A href='https://www.freecodecamp.org/certification/kporcelainluv/javascript-algorithms-and-data-structures'>FreeCodeCamp, JavaScript Algorithms and Data Structures</A></li>
+          <li><A href={`#`}>Frontend masters, Complete Intro to React</A></li>
           <li><A href={`#`}>Udemy, Modern React with Redux</A></li>
           <li><A href={`static/Coursera1.pdf`}>Coursera, Introduction to Python</A></li>
           <li><A href={`static/Coursera2.pdf`}>Coursera, Diving into Python</A></li>
